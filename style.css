@@ -1,0 +1,104 @@
+
+:root{
+    --active :#336699;
+    --none:#e0e0e0;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: vazirFD;
+    src: url(Vazir-Medium-FD.ttf);
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: vazirFD;
+    font-size: 3rem;
+}
+
+.container{
+    width: 80vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.progress{
+    display: flex;
+    flex-direction: column;
+    flex-basis: 70%;
+    align-items: center;
+    justify-content: center;
+}
+
+.bar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.num{
+    transition: 0.5s ease;
+    color: var(--none);
+    width: 4rem;
+    height: 4rem;
+    border: 0.6rem solid var(--none);
+    border-radius: 50%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.line{
+    transition: 0.5s ease;
+    width: 7rem;
+    height: 0.6rem;
+    background-color: var(--none);
+}
+
+.btns{
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.8rem 4rem;
+    font-family: inherit;
+    font-size: 1.2rem;
+    border: 0;
+    background-color: var(--active);
+    border-radius: 1rem;
+    color: #fff;
+    cursor: pointer;
+}
+
+.btn:active{
+    transform: scale(0.98);
+}
+
+.active{
+    border-color: var(--active);
+    color: var(--active);
+}
+
+.activeLine{
+    background-color: var(--active);
+}
+
+.btn:disabled{
+    background-color: var(--none);
+    cursor: not-allowed;
+}
